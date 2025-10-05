@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment Details</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <header>
+    <h1>Payment Details</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+  
+  </nav>
+  </header>
+  <main>
+    <section id="order-summary">
+      <h2>Order Summary</h2>
+      <ul id="order-items"></ul>
+      <p></p>
+      <p>Total Amount: ₦<span id="order-total"></span></p>
+    </section>
+
+    <section id="payment-info">
+      <h2>Payment Information</h2>
+      <p>Please transfer the total amount to the following account or use the provided payment method:</p>
+      <p><strong>Account Name:</strong> COVENANT DAYCARE GARDEN FOUNDATION </p>
+      <p><strong>Account Number:</strong> 2036201646</p>
+      <p><strong>Bank:</strong>FIRST BANK Plc </p>
+      <p>kindly attech the books you order in your payment slip</p>
+    </section>
+    <section id="submit-proof">
+      <h2>Submit Payment Proof</h2>
+      <p>After making the payment, click the button below to send us your payment proof via email.</p>
+      <a id="email-button" href="mailto:addpr467@gmail.com, nathchuks_consulting@yahoo.com?subject=Payment Proof for Order" class="button">Email Payment Proof</a>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Covenant Books & Consulting. All Rights Reserved.</p>
+    <p>Empowering lives through literature, community support, and global business expertise. <br>
+    <nav>   <a href="about.html"> About Us</a> |<a href="servics.html"> Services</a> | <a href="contact.html"> Contact Us</a></nav> <br>
+        Follow us on: Facebook • Twitter • LinkedIn
+        </p>
+        <p>Covenant Daycare Garden Foundation is a proud initiative dedicated to supporting elders and widows in need.</p>
+</footer>
+  <script>
+    // Retrieve cart data from localStorage
+    const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+    const orderItemsList = document.getElementById("order-items");
+    const orderTotalEl = document.getElementById("order-total");
+
+    let total = 0;
+
+    cartData.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} (${item.type}) - ₦${(item.price / 100).toFixed(2)}`;
+      total += item.price;
+      orderItemsList.appendChild(li);
+    });
+
+    orderTotalEl.textContent = (total / 100).toFixed(2);
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-header" id="topHeader">
+        <a href="donate.html">Make a Donation Now</a> | 
+        <a href="buy.html">Buy Now</a>
+    </div>
+    
+
+    <header>
+        <h1>  <img src="logo.png" alt="" style="width: 130px; height: 160px;">UNUSUAL USUAL MAN</h1>
+        <H3>Online Bookstore 
+        </H3>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="servics.html">Services</a>
+        <a href="HumanitarianInitiative.html">Humanitarian Initiative</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <button onclick="viewCart()" class="css1">🛒 Cart (<span id="cart-count">0</span>)</button>
+ 
+    <section class="books">
+        <div class="card">
+            <h2>Book 1</h2>
+            <H3>'REPOSITION OF CHRIST'</H3>
+            <img src="rep.jpg" alt="" class="inn"><br>
+            <a href="REPOSITION.html" class="link">Read more</a>
+            <p> <b>Author:</b> Nathaneil C.U.Okoro</p>
+            <p>Price: ₦1000 (Soft Copy) | ₦1700 (Hard Copy)</p>
+            <button onclick="addToCart('REPOSITION OF CHRIST',  1000, 'Soft Copy')">Buy Soft Copy</button>
+            <button onclick="addToCart('REPOSITION OF CHRIST', 1700, 'Hard Copy')">Buy Hard Copy</button>
+        </div>
+
+        <div class="card">
+            <h2>Book 2</h2>
+            <H3>'DARE TO LIVE MY PASSION'</H3>
+            <img src="mypass.jpg" alt="" class="inn">
+            <br>
+            <a href="daretolivemypassion.html" class="link">Read more</a>
+            <p> <b>Author:</b> Nathaneil C.U.Okoro</p>
+            <p>Price: ₦8,500 (Soft Copy) | ₦22,000 (Hard Copy)</p>
+            <button onclick="addToCart('DARE TO LIVE MY PASSION', 8500, 'Soft Copy')">Buy Soft Copy</button>
+            <button onclick="addToCart('DARE TO LIVE MY PASSION', 22000, 'Hard Copy')">Buy Hard Copy</button>
+        </div>
+        <div class="card">
+            <h2>Book 3</h2>
+            <H3>'NIGERIA ENTERPRISE'</H3>
+            <img src="nige.jpg" alt="" class="inn">
+            <br>
+            <a href="nigeriainter.html"  class="link">Read more</a>
+            <p> <b>Author:</b> Nathaneil C.U.Okoro</p>
+            <p>Price: ₦4,000 (Soft Copy) | ₦6,000 (Hard Copy)</p>
+            <button onclick="addToCart('NIGERIA ENTERPRISE', 4000, 'Soft Copy')">Buy Soft Copy</button>
+            <button onclick="addToCart('NIGERIA ENTERPRISE', 6000, 'Hard Copy')">Buy Hard Copy</button>
+        </div> 
+        <div class="card">
+            <h2>Book 4</h2>
+            <H3>'DARE TO SMILE  <br> <p class="pd"> IN THE DARKNESS OF LIFE'</p></H3>
+            <img src="dare.jpg" alt="" class="inn">
+            <br>
+            <a href="daretosmile.html"  class="link">Read more</a>
+            <p> <b>Author:</b> Nathaneil C.U.Okoro</p>
+            <p>Price: ₦3,000 (Soft Copy) | ₦5,000 (Hard Copy)</p>
+            <button onclick="addToCart('DARE', 3000, 'Soft Copy')">Buy Soft Copy</button>
+            <button onclick="addToCart('DARKNESS AT NOONDAY DARE TO CHANGE THE SCRIPT', 5000, 'Hard Copy')">Buy Hard Copy</button>
+        </div>
+        <div class="card">
+            <h2>Book 5</h2>
+            <H3>'GRASS TO GRACE'</H3>
+            <img src="grasee (1).jpg" alt="" class="inn" >
+            <br>
+            <a href="grasetograce.html"  class="link">Read more</a>
+            <p> <b>Author:</b> Nathaneil C.U.Okoro</p>
+            <p>Price: ₦7,000 (Soft Copy) | ₦16,000 (Hard Copy)</p>
+            <button onclick="addToCart('GRASS TO GRACE', 7000, 'Soft Copy')">Buy Soft Copy</button>
+            <button onclick="addToCart('GRASS TO GRACE', 16000, 'Hard Copy')">Buy Hard Copy</button>
+        </div>
+        <div class="card">
+            <h2>Book 6</h2>
+            <H3>'DARKNESS AT NOONDAY <br> <p class="pd"> DARE TO CHANGE THE SCRIPT'</p></H3>
+            <img src="dark.png" alt="" class="inn">
+            <br>
+            <a href="darkness.html" class="link">Read more</a>
+            <p> <b>Author:</b> Nathaneil C.U.Okoro</p>
+            <p>Price: ₦10,000 (Soft Copy) | ₦18,000 (Hard Copy)</p>
+            <button onclick="addToCart('DARE', 10000, 'Soft Copy')">Buy Soft Copy</button>
+            <button onclick="addToCart('DARKNESS AT NOONDAY DARE TO CHANGE THE SCRIPT', 18000, 'Hard Copy')">Buy Hard Copy</button>
+        </div>
+
+        <div class="card">
+            <h2>On coming Books</h2>
+            <H3>
+                <ul>
+                    <li>EDGU KINGDOM IN HISTORY</li> <br>
+                    <li>UNUSUAL USUAL MAN.</li> <br>
+                   <li>THE NIGERIA RAINWAY SYSTEM JUNK & JEWEL.</li><br>
+                   <li>NIGERIA INSTITUTE OF TRANSPORT TECHOLOGY ZARIA IN HISTORY.</li><br>
+                  
+               </ul>
+            </H3>
+       
+    </section>
+</div>
+<br>
+<p class="wbr"> COVENANT DAYCARE GARDEN FOUNDATION</p>
+<div class="card2">
+    <img src="daycare1.png" alt="">
+
+<img src="daycare2.jpg" alt="">
+
+</div>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₦<span id="total-price">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+        
+    </div>
+    <footer>
+        <p>© 2025 Covenant Books & Consulting. All Rights Reserved.</p>
+        <p>Empowering lives through literature, community support, and global business expertise. <br>
+          <nav class=""> <a href="about.html"> About Us</a> |<a href="servics.html"> Services</a>      | <a href="contact.html"> Contact Us</a> <br></nav>
+            Follow us on: Facebook • Twitter • LinkedIn
+            </p>
+            <p>Covenant Daycare Garden Foundation is a proud initiative dedicated to supporting elders and widows in need.</p>
+    </footer>   
+   
+    <script>
+        /* === Slide & Fade Banner every 10 seconds === */
+        const topHeader = document.getElementById('topHeader');
+        let isVisible = false;
+        
+        function toggleBanner() {
+            isVisible = !isVisible;
+            if (isVisible) {
+                topHeader.classList.add('show');
+            } else {
+                topHeader.classList.remove('show');
+            }
+        }
+        
+        // Show banner after 1 second on page load
+        setTimeout(toggleBanner, 1000);
+        
+        // Toggle banner every 10 seconds
+        setInterval(toggleBanner, 10000);
+        </script>
+    <script src="script.js"></script>
+</body>
+</html>
